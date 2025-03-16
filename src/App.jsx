@@ -1,8 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import UserLayout from './Layout'
+import TestPage from './Shubham_features/testPage'
 
-export default function App() {
-  return <h1 className="text-1xl  underline">Hello world!</h1>;
+const App = () => {
+  return (
+    <Routes>
+        <Route path="" element={<UserLayout />}>
+          <Route
+            path="/"
+            element={<TestPage/>}
+          />
+        </Route>
+      </Routes>
+
+  )
 }
+
+export default App
