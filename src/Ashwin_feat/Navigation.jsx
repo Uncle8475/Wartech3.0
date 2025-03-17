@@ -33,7 +33,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/About"
+            to="#about"
             className={({ isActive }) =>
               isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
             }
