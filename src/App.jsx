@@ -6,7 +6,7 @@ import AboutUs from "./Ashwin_feat/AboutUs";
 import Milestones from "./Ashwin_feat/Milestones";
 import NotFound from "./Ashwin_feat/NotFound";
 import Wartech from "./Shubham_features/Wartech";
-
+import Event from "./Ashwin_feat/Events";
 const App = () => {
   return (
     <Routes>
@@ -14,7 +14,7 @@ const App = () => {
         {/* <Route path="/TestPage" element={<TestPage />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<AboutUs />} />
-        <Route path="/Events" element={<Wartech />} />
+        <Route path="/Events" element={<Event />} />
         <Route path="/Milestones" element={<Milestones />} />
       </Route>
       <Route path="*" element={<NotFound />} />

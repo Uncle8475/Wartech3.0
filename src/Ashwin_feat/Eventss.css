@@ -1,0 +1,4 @@
+.event-box:hover .event-img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(5605%)
+    hue-rotate(347deg) brightness(80%) contrast(100%);
+}
