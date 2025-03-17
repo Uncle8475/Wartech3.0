@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/Cear-logo.png";
 import contacti from "../assets/arrow-right-solid.svg";
 
@@ -10,9 +10,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full top-0 left-0 z-10 ${
+      className={`w-full h-full md:max-h-28 top-0 left-0 z-10 ${
         isHomepage ? "absolute" : "fixed"
-      } bg-transparent backdrop-blur-md p-4 flex justify-between items-center`}
+      } bg-transparent backdrop-blur-md p-4 flex justify-between items-center `}
     >
       {/* Logo */}
       <div className="w-14">
@@ -22,24 +22,44 @@ function Navbar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-6 text-white text-lg">
         <li>
-          <Link to="/" className="hover:text-gray-300">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-gray-300" : "hover:text-gray-300"
+            }
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <a href="#about" className="hover:text-gray-300">
+          <NavLink
+            to="#about"
+            className={({ isActive }) =>
+              isActive ? "text-gray-300" : "hover:text-gray-300"
+            }
+          >
             About
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#events" className="hover:text-gray-300">
+          <NavLink
+            to="#events"
+            className={({ isActive }) =>
+              isActive ? "text-gray-300" : "hover:text-gray-300"
+            }
+          >
             Events
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#Milestones" className="hover:text-gray-300">
+          <NavLink
+            to="#Milestones"
+            className={({ isActive }) =>
+              isActive ? "text-gray-300" : "hover:text-gray-300"
+            }
+          >
             Milestones
-          </a>
+          </NavLink>
         </li>
       </ul>
 
@@ -58,7 +78,7 @@ function Navbar() {
 
       {/* Mobile Sidebar */}
       {isOpen && (
-        <div className="fixed top-0 right-0 w-64 h-full bg-black text-white shadow-lg flex flex-col p-6 transition-transform">
+        <div className="fixed top-0 right-0 w-full h-full bg-black text-white shadow-lg flex flex-col p-6 transition-transform">
           <span
             className="text-3xl cursor-pointer absolute top-4 right-4"
             onClick={() => setIsOpen(false)}
@@ -67,26 +87,46 @@ function Navbar() {
           </span>
           <ul className="mt-10 space-y-6 text-lg">
             <li>
-              <Link to="/" onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="/"
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) => (isActive ? "text-gray-300" : "")}
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <a href="#about" onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="#about"
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) => (isActive ? "text-gray-300" : "")}
+              >
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#events" onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="#events"
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) => (isActive ? "text-gray-300" : "")}
+              >
                 Events
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#Milestones" onClick={() => setIsOpen(false)}>
+              <NavLink
+                to="#Milestones"
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) => (isActive ? "text-gray-300" : "")}
+              >
                 Milestones
-              </a>
+              </NavLink>
             </li>
           </ul>
+          <button className="hidden md:flex items-center bg-red-600 px-4 py-2 rounded-lg text-white hover:bg-red-700 transition-all">
+            Contact us{" "}
+            <img src={contacti} alt="arrow icon" className="ml-2 w-4" />
+          </button>
         </div>
       )}
     </nav>
