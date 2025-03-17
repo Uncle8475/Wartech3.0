@@ -17,6 +17,9 @@ html {
 /* Body Styles */
 body {
   @apply bg-[#0d0d0d] text-white font-sans;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* Custom Button */
