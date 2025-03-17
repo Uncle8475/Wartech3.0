@@ -22,7 +22,7 @@ function Events() {
         <button className=" px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
           Events
         </button>
-        <h1 className="text-5xl font-bold mt-4">WARTECH</h1>
+        <h1 className=" pt-10 text-5xl font-bold mt-4">WARTECH</h1>
         <p className="text-lg mt-2 max-w-2xl">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
           aperiam reiciendis voluptate pariatur labore impedit! Architecto
