@@ -8,7 +8,7 @@ import TwitterX from "../assets/TwitterX.png";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 absolute bottom-0 w-full text-white py-10 px-6">
+    <footer className="relative w-full bg-gray-900 text-white py-10 px-6 mt-auto">
       <div className="container mx-auto flex flex-wrap justify-between gap-8">
         {/* Logo & Address Section */}
         <div className="w-full md:w-1/3 flex flex-col">

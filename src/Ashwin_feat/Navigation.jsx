@@ -12,7 +12,7 @@ function Navbar() {
     <nav
       className={`w-full h-full md:max-h-28 top-0 left-0 z-10 ${
         isHomepage ? "absolute" : "fixed"
-      } bg-transparent backdrop-blur-md p-4 flex justify-between items-center `}
+      } bg-transparent backdrop-blur-sm p-4 flex justify-between items-center `}
     >
       {/* Logo */}
       <div className="w-14">

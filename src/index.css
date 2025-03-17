@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+body,
+
+/* Body Styles */
+body {
+  @apply bg-gray-900 text-white font-sans;
+}
+
+/* Custom Button */
+.btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg transition-transform duration-200 hover:scale-105;
+}
+
+/* Heading Styles */
+h1 {
+  @apply text-4xl font-bold text-center my-4;
+}
+
+h2 {
+  @apply text-2xl font-semibold my-2;
+}
+
+/* Center Content */
+.center {
+  @apply flex items-center justify-center;
+}
+
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Responsive Grid */
+.grid-cols-auto {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
