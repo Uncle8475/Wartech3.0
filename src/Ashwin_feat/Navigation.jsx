@@ -33,7 +33,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="#about"
+            to="/About"
             className={({ isActive }) =>
               isActive ? "text-gray-300" : "hover:text-gray-300"
             }
@@ -43,7 +43,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="#events"
+            to="/Events"
             className={({ isActive }) =>
               isActive ? "text-gray-300" : "hover:text-gray-300"
             }
@@ -53,7 +53,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="#Milestones"
+            to="/Milestones"
             className={({ isActive }) =>
               isActive ? "text-gray-300" : "hover:text-gray-300"
             }
@@ -106,7 +106,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="#events"
+                to="/Events"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) => (isActive ? "text-gray-300" : "")}
               >
@@ -115,7 +115,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="#Milestones"
+                to="/Milestones"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) => (isActive ? "text-gray-300" : "")}
               >
