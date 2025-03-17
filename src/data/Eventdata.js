@@ -8,6 +8,7 @@ import b7 from "../assets/b7.png";
 import b8 from "../assets/b8.png";
 import soccer1 from "../assets/robosoccere1.png";
 import soccer2 from "../assets/robosoccere2.png";
+import back1 from "../assets/bagroundmilestone.png";
 const roboticsEvents = [
   {
     id: 1,
@@ -20,9 +21,10 @@ const roboticsEvents = [
     technicalAspects: "Max robot size: 30cm x 30cm; Wireless control allowed",
     restrictions: "No destructive mechanisms allowed",
     img: b1,
+    backgroundImage: back1, // Background Image
     extraimg: [soccer1, soccer2],
     description:
-      "RoboSoccer is a competitive event where manually controls while defending their own. The team with the most goals wins, with a tiebreaker if needed.",
+      "RoboSoccer is a competitive event where manually controlled robots score goals while defending their own.",
   },
   {
     id: 2,
@@ -36,6 +38,7 @@ const roboticsEvents = [
       "Max arm reach: 40cm; Autonomous and manual control allowed",
     restrictions: "No destructive gripping allowed",
     img: b2,
+    backgroundImage: back1, // Background Image
     description:
       "An arena with obstacles where bots must pick up objects and strategically place them at designated locations.",
   },
@@ -50,6 +53,7 @@ const roboticsEvents = [
     technicalAspects: "Max weight: 2kg; FPV camera recommended",
     restrictions: "No GPS autopilot allowed",
     img: b3,
+    backgroundImage: back1, // Background Image
     description:
       "An aerial obstacle course where drones compete to complete all obstacles in the shortest time.",
   },
@@ -64,6 +68,7 @@ const roboticsEvents = [
     technicalAspects: "Max speed: 5 m/s; Wireless control allowed",
     restrictions: "No external assistance allowed",
     img: b4,
+    backgroundImage: back1, // Background Image
     description:
       "Participants race remote-controlled cars around a track, navigating various challenges.",
   },
@@ -79,6 +84,7 @@ const roboticsEvents = [
       "Max robot size: 25cm x 25cm; Sensors required for navigation",
     restrictions: "No manual intervention allowed",
     img: b5,
+    backgroundImage: back1, // Background Image
     description:
       "A large racing track where participants race to complete laps in the fastest time.",
   },
@@ -92,6 +98,7 @@ const roboticsEvents = [
     technicalAspects: "Use of CAD software and slicers",
     restrictions: "No external parts except filament allowed",
     img: b6,
+    backgroundImage: back1, // Background Image
     description:
       "Dive into the world of 3D printing, learning about layer-by-layer object creation from digital models.",
   },
@@ -105,6 +112,7 @@ const roboticsEvents = [
     technicalAspects: "Basic programming in C/C++",
     restrictions: "No pre-built circuits allowed",
     img: b7,
+    backgroundImage: back1, // Background Image
     description:
       "Explore embedded systems and sensor technology in a hands-on Arduino workshop.",
   },
@@ -118,6 +126,7 @@ const roboticsEvents = [
     technicalAspects: "Python programming, TensorFlow basics",
     restrictions: "No pre-trained models allowed",
     img: b8,
+    backgroundImage: back1, // Background Image
     description:
       "A workshop covering AI and machine learning, including hands-on training with real-world data applications.",
   },

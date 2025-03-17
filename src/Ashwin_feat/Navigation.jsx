@@ -10,22 +10,22 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full md:max-h-24 top-0 left-0 z-50 ${
+      className={`w-full  md:max-h-24 top-0 left-0 z-50 p-5 ${
         isHomepage ? "absolute" : "fixed"
-      } bg-transparent backdrop-blur-sm p-4 flex justify-between items-center shadow-lg`}
+      } bg-transparent backdrop-blur-[2px] p-4 flex justify-between items-center shadow-lg`}
     >
       {/* Logo */}
       <div className="w-16">
-        <img src={logo} alt="Club Logo" className="w-full" />
+        <img src={logo} alt="Club Logo" className="w-[3rem]" />
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-8 text-white text-lg font-medium">
+      <ul className="hidden md:flex gap-8 text-white text-lg ">
         <li>
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-semibold" : "hover:text-gray-300"
             }
           >
             Home
@@ -33,9 +33,9 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="#about"
+            to="#About"
             className={({ isActive }) =>
-              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-semibold " : "hover:text-gray-300"
             }
           >
             About
@@ -45,7 +45,7 @@ function Navbar() {
           <NavLink
             to="/Events"
             className={({ isActive }) =>
-              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-semibold " : "hover:text-gray-300"
             }
           >
             Events
@@ -55,7 +55,7 @@ function Navbar() {
           <NavLink
             to="/Milestones"
             className={({ isActive }) =>
-              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-semibold" : "hover:text-gray-300"
             }
           >
             Milestones
@@ -64,7 +64,7 @@ function Navbar() {
       </ul>
 
       {/* Contact Button */}
-      <button className="hidden md:flex items-center bg-red-800 px-6 py-3 text-lg rounded-xl text-white hover:bg-red-800 transition-all shadow-md">
+      <button className="hidden md:flex items-center bg-red-800 px-5 py-2 text-md rounded-xl text-white hover:bg-red-800 transition-all shadow-md">
         Contact us
         <img src={contactIcon} alt="arrow icon" className="ml-2 w-4" />
       </button>
