@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
-
+import Navbar from "./Ashwin_feat/Navigation";
+import Footer from "./Ashwin_feat/footer";
 const UserLayout = () => {
   return (
     <div>
       {/* <Navigation/> */}
-      <h1>Navbar</h1>
+      <Navbar />
       <Outlet /> {/* Content specific to the route will be rendered here */}
-      <h1>Footer</h1>
+      <Footer />
     </div>
   );
 };
