@@ -33,7 +33,7 @@ function Events() {
       {/* Event Cards in a 4-column Grid with Side Padding */}
       <div
         id="event-list"
-        className=" event-img pb-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-6 md:px-10 lg:px-16 text-white mb-60"
+        className=" event-img pb-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-6 md:px-10 lg:px-16 text-white mb-60 ml-20 mr-20"
       >
         {eventsData.map((event, index) => (
           <div
@@ -44,7 +44,7 @@ function Events() {
                 ${index < 4 ? "border-t-0" : ""} 
                 ${index >= eventsData.length - 4 ? "border-b-0" : ""}`}
           >
-            <Link to={`/events/${event.title}`} className="block">
+            <Link to={`/events/${event.title}`} className="block ">
               {/* Event Icon with Ring */}
               <img
                 src={event.img}
