@@ -3,7 +3,7 @@ import Navbar from "./Ashwin_feat/Navigation";
 import Footer from "./Ashwin_feat/footer";
 const UserLayout = () => {
   return (
-    <div>
+    <div className="h-screen w-[100%]">
       {/* <Navigation/> */}
       <Navbar />
       <Outlet /> {/* Content specific to the route will be rendered here */}

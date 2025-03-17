@@ -19,7 +19,7 @@ const Home = () => {
         {/* Content (Ensures it's above overlay) */}
         <div className="relative z-10">
           <CountdownTimer targetDate="2025-04-03T23:59:59" />
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-7xl font-thin text-white shadow-lg">
             Center of Excellence for
           </p>
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">

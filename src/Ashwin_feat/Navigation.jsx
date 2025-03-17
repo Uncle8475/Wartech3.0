@@ -38,7 +38,7 @@ function Navbar() {
               isActive ? "text-red-800 font-semibold " : "hover:text-gray-300"
             }
           >
-            About
+            About Us
           </NavLink>
         </li>
         <li>
@@ -48,7 +48,17 @@ function Navbar() {
               isActive ? "text-red-800 font-semibold " : "hover:text-gray-300"
             }
           >
-            Events
+            Wartech
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              isActive ? "text-red-800 font-semibold " : "hover:text-gray-300"
+            }
+          >
+            Blogs
           </NavLink>
         </li>
         <li>

@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
 
         <Route path="/Events" element={<Event />} />
+        <Route path="/Wartech" element={<Wartech />} />
         <Route path="/Milestones" element={<Milestones />} />
         <Route path="/events/:eventName" element={<EventInfo />} />
       </Route>
