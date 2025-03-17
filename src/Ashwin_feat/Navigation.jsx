@@ -10,9 +10,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full h-full md:max-h-28 top-0 left-0 z-10 ${
+      className={`w-full md:max-h-28 top-0 left-0 z-10 ${
         isHomepage ? "absolute" : "fixed"
-      } bg-transparent backdrop-blur-sm p-4 flex justify-between items-center `}
+      } bg-transparent backdrop-blur-md p-4 flex justify-between items-center shadow-lg bg-zinc-950 `}
     >
       {/* Logo */}
       <div className="w-14">
@@ -25,7 +25,7 @@ function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-gray-300" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
             }
           >
             Home
@@ -35,7 +35,7 @@ function Navbar() {
           <NavLink
             to="/About"
             className={({ isActive }) =>
-              isActive ? "text-gray-300" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
             }
           >
             About
@@ -45,7 +45,7 @@ function Navbar() {
           <NavLink
             to="/Events"
             className={({ isActive }) =>
-              isActive ? "text-gray-300" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
             }
           >
             Events
@@ -55,7 +55,7 @@ function Navbar() {
           <NavLink
             to="/Milestones"
             className={({ isActive }) =>
-              isActive ? "text-gray-300" : "hover:text-gray-300"
+              isActive ? "text-red-800 font-bold" : "hover:text-gray-300"
             }
           >
             Milestones
@@ -78,7 +78,7 @@ function Navbar() {
 
       {/* Mobile Sidebar */}
       {isOpen && (
-        <div className="fixed top-0 right-0 w-full h-full bg-black text-white shadow-lg flex flex-col p-6 transition-transform">
+        <div className="fixed top-0 right-0 w-full h-screen bg-black text-white shadow-lg flex flex-col p-6 transition-transform">
           <span
             className="text-3xl cursor-pointer absolute top-4 right-4"
             onClick={() => setIsOpen(false)}
@@ -97,7 +97,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="#about"
+                to="/About"
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) => (isActive ? "text-gray-300" : "")}
               >

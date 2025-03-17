@@ -3,24 +3,21 @@ import { Route, Routes } from "react-router-dom";
 import UserLayout from "./Layout";
 import Home from "./Ashwin_feat/Home";
 import AboutUs from "./Ashwin_feat/AboutUs";
-import Events from "./Ashwin_feat/Events";
 import Milestones from "./Ashwin_feat/Milestones";
 import NotFound from "./Ashwin_feat/NotFound";
-import Test from "./Ashwin_feat/Test";
+import Wartech from "./Shubham_features/Wartech";
 
 const App = () => {
   return (
     <Routes>
       <Route path="" element={<UserLayout />}>
         {/* <Route path="/TestPage" element={<TestPage />} /> */}
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/About" element={<AboutUs />} />
-        <Route path="/Events" element={<Events />} />
+        <Route path="/Events" element={<Wartech />} />
         <Route path="/Milestones" element={<Milestones />} />
-        <Route path="/Test" element={<Test />} />
-
-        <Route path="*" element={<NotFound />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
