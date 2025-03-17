@@ -13,14 +13,19 @@ const Home = () => {
         className="relative flex flex-col items-center justify-center h-screen w-full text-center bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${aitimg})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-30 "></div>
-        <CountdownTimer targetDate="2025-04-03T23:59:59" />
-        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white">
-          Center of Excellence for
-        </p>
-        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-          AI and Robotics
-        </p>
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+
+        {/* Content (Ensures it's above overlay) */}
+        <div className="relative z-10">
+          <CountdownTimer targetDate="2025-04-03T23:59:59" />
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-white">
+            Center of Excellence for
+          </p>
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            AI and Robotics
+          </p>
+        </div>
 
         {/* Wave acting as a bottom boundary */}
         <img
@@ -29,9 +34,8 @@ const Home = () => {
           alt="Wave Boundary"
         />
         <Marquee text="Wartech 3.0 Coming soon! Stay Tuned 3rd March - 6th March 2025. 🚀" />
-
-        <div></div>
       </div>
+
       <AboutUs />
       <Gallary />
     </>
