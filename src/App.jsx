@@ -6,6 +6,7 @@ import AboutUs from "./Ashwin_feat/AboutUs";
 import Milestones from "./Ashwin_feat/Milestones";
 import NotFound from "./Ashwin_feat/NotFound";
 import Wartech from "./Shubham_features/Wartech";
+import "./";
 
 const App = () => {
   return (

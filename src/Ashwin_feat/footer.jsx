@@ -8,7 +8,7 @@ import TwitterX from "../assets/TwitterX.png";
 
 function Footer() {
   return (
-    <footer className="bg-zinc-900 relative bottom-0 w-full text-white py-10 px-6">
+    <footer className=" relative bottom-0 w-full text-white py-10 px-6 border-t border-gray-300">
       <div className="container mx-auto flex flex-wrap justify-between gap-8">
         {/* Logo & Address Section */}
         <div className="w-full md:w-1/3 flex flex-col">
@@ -22,53 +22,63 @@ function Footer() {
         </div>
 
         {/* Navigation Links */}
-          <div className="w-full md:w-1/4 flex flex-col">
-            <h3 className="text-lg font-semibold mb-3">Menu</h3>
-            <nav className="space-y-2 flex flex-col">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-            isActive ? "text-red-800 font-bold hover:text-gray-400" : "hover:text-gray-400"
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/Events"
-                className={({ isActive }) =>
-            isActive ? "text-red-800 font-bold hover:text-gray-400" : "hover:text-gray-400"
-                }
-              >
-                Events
-              </NavLink>
-              <NavLink
-                to="/Milestones"
-                className={({ isActive }) =>
-            isActive ? "text-red-800 font-bold hover:text-gray-400" : "hover:text-gray-400"
-                }
-              >
-                Milestones
-              </NavLink>
-              <NavLink
-                to="/About"
-                className={({ isActive }) =>
-            isActive ? "text-red-800 font-bold hover:text-gray-400" : "hover:text-gray-400"
-                }
-              >
-                About Us
-              </NavLink>
-              <NavLink
-                to="/Contact"
-                className={({ isActive }) =>
-            isActive ? "bg-red-800 hover:text-gray-400" : "hover:text-gray-400"
-                }
-              >
-                Contact Us
-              </NavLink>
-            </nav>
-          </div>
+        <div className="w-full md:w-1/4 flex flex-col">
+          <h3 className="text-lg font-semibold mb-3">Menu</h3>
+          <nav className="space-y-2 flex flex-col">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-800 font-bold hover:text-gray-400"
+                  : "hover:text-gray-400"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/Events"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-800 font-bold hover:text-gray-400"
+                  : "hover:text-gray-400"
+              }
+            >
+              Events
+            </NavLink>
+            <NavLink
+              to="/Milestones"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-800 font-bold hover:text-gray-400"
+                  : "hover:text-gray-400"
+              }
+            >
+              Milestones
+            </NavLink>
+            <NavLink
+              to="/About"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-800 font-bold hover:text-gray-400"
+                  : "hover:text-gray-400"
+              }
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/Contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-red-800 hover:text-gray-400"
+                  : "hover:text-gray-400"
+              }
+            >
+              Contact Us
+            </NavLink>
+          </nav>
+        </div>
 
-          {/* Social Links & Email Subscription */}
+        {/* Social Links & Email Subscription */}
         <div className="w-full md:w-1/3">
           <h3 className="text-lg font-semibold mb-3">Connect with us</h3>
           <div className="flex gap-4 mb-4">

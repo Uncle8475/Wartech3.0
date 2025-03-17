@@ -21,7 +21,7 @@ const Home = () => {
         {/* Wave acting as a bottom boundary */}
         <img
           src={wave}
-          className="absolute bottom-0 left-0 w-full"
+          className="absolute bottom-0 left-0 w-full -mb-8"
           alt="Wave Boundary"
         />
         <div></div>

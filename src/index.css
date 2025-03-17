@@ -13,11 +13,10 @@
 html {
   scroll-behavior: smooth;
 }
-body,
 
 /* Body Styles */
 body {
-  @apply bg-gray-900 text-white font-sans;
+  @apply bg-[#0d0d0d] text-white font-sans;
 }
 
 /* Custom Button */

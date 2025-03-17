@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // Import images from assets/gallery
@@ -8,12 +8,22 @@ import img3 from "../assets/gallery/image3.jpg";
 import img4 from "../assets/gallery/image4.jpg";
 import img5 from "../assets/gallery/image5.jpg";
 import img6 from "../assets/gallery/image6.jpg";
+import img7 from "../assets/gallery/image7.jpg";
 
-const images = [img1, img2, img3, img4, img5, img6];
+const images = [img1, img2, img3, img4, img5, img6, img7];
 
-function Gallary() {
+function Gallery() {
   const [current, setCurrent] = useState(0);
   const length = images.length;
+
+  // Auto-switch images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [length]);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -24,15 +34,19 @@ function Gallary() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-10 flex flex-col items-center">
-      <h2 className="text-3xl font-semibold text-center mb-6">Gallary</h2>
+    <div className="bg-[#0d0d0d] container mb-20 mx-auto px-4 py-10 flex flex-col items-center">
+      <div className="flex justify-center pb-20 mb-1">
+        <button className="px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
+          Gallary
+        </button>
+      </div>
 
       <div className="relative w-full max-w-3xl h-80 overflow-hidden rounded-lg shadow-lg">
         {/* Slide Transition */}
         <motion.img
           key={current}
           src={images[current]}
-          alt={`Gallary ${current + 1}`}
+          alt={`Gallery ${current + 1}`}
           className="w-full h-full object-cover"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -71,4 +85,4 @@ function Gallary() {
   );
 }
 
-export default Gallary;
+export default Gallery;
