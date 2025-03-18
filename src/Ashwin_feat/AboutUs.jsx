@@ -7,7 +7,7 @@ const AboutUs = () => {
       {/* About Section */}
       <section
         id="about"
-        className="bg-[#8E1616] text-white py-16 px-6 md:px-12 min-h-screen"
+        className="] text-white py-16 px-6 md:px-12 min-h-screen"
       >
         {/* Centered About Us Button */}
         <div className="flex justify-center pb-20 mb-6">

@@ -1,19 +1,58 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Wartech = () => {
+  const videoRef = useRef(null);
+  const [reverse, setReverse] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    let frame;
+
+    const playVideo = () => {
+      if (!video) return;
+
+      if (!reverse) {
+        if (video.currentTime < video.duration) {
+          video.currentTime += 0.033;
+          frame = requestAnimationFrame(playVideo);
+        } else {
+          setReverse(true);
+        }
+      } else {
+        if (video.currentTime > video.duration) {
+          video.currentTime -= 0.033;
+          frame = requestAnimationFrame(playVideo);
+        } else {
+          setReverse(false);
+        }
+      }
+    };
+
+    frame = requestAnimationFrame(playVideo);
+
+    return () => cancelAnimationFrame(frame);
+  }, [reverse]);
+
   return (
     <>
-      <div className="h-full w-full absolute  opacity-10"></div>
+      <div className="h-full w-full absolute opacity-10"></div>
       <div className="h-screen flex items-center justify-center bg-transparent">
-        <motion.h1 className="text-6xl md:text-9xl uppercase font-extrabold drop-shadow-2xl text-white">
+        <motion.h1
+          style={{
+            fontFamily: "Starjedi",
+            color: "#FFE81F",
+            textShadow: "0 0 0px #FFE81F, 0 0 0px #FFE81F, 0 0 10px #FFE81F",
+          }}
+          className="text-4xl md:text-8xl uppercase font-thin drop-shadow-2xl"
+        >
           Wartech
         </motion.h1>
       </div>
 
-      <div className="events-container h-full content-center whitespace-nowrap  overflow-hidden bg-white">
+      <div className="events-container h-full content-center whitespace-nowrap overflow-hidden bg-white">
         <div className="h-96 w-96 bg-red-900 inline-block m-3"></div>
-        <div className="h-96 w-96 bg-red-900 inline-block m-3" ></div>
+        <div className="h-96 w-96 bg-red-900 inline-block m-3"></div>
         <div className="h-96 w-96 bg-red-900 inline-block m-3"></div>
         <div className="h-96 w-96 bg-red-900 inline-block m-3"></div>
         <div className="h-96 w-96 bg-red-900 inline-block m-3"></div>
@@ -21,13 +60,11 @@ const Wartech = () => {
         <div className="h-96 w-96 bg-red-900 inline-block m-3"></div>
       </div>
 
-
-      {/* background video of space in loop */}
-      <section className="fixed top-0 left-0 w-full h-full z-[-1] ">
+      {/* Background video with forward and reverse effect */}
+      <section className="fixed top-0 left-0 w-full h-full z-[-1]">
         <video
-          src="/bg-video.mp4"
-          autoPlay
-          loop
+          ref={videoRef}
+          src="/124685-731575433_large.mp4"
           preload="auto"
           playsInline
           muted

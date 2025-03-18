@@ -8,6 +8,8 @@ import NotFound from "./Ashwin_feat/NotFound";
 import Wartech from "./Shubham_features/Wartech";
 import Event from "./Ashwin_feat/Events";
 import EventInfo from "./Ashwin_feat/EventInfo";
+import "./Font.css";
+
 const App = () => {
   return (
     <Routes>
