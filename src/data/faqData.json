@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "question": "What is the date of the robotics event?",
+        "answer": "The robotics event will be held on November 15th, 2023."
+    },
+    {
+        "id": 2,
+        "question": "Where will the event take place?",
+        "answer": "The event will take place in the main auditorium of the college."
+    },
+    {
+        "id": 3,
+        "question": "Who can participate in the robotics event?",
+        "answer": "All college students are eligible to participate in the robotics event."
+    },
+    {
+        "id": 4,
+        "question": "How can I register for the event?",
+        "answer": "You can register for the event by filling out the registration form available on the college website."
+    },
+    {
+        "id": 5,
+        "question": "Is there any registration fee?",
+        "answer": "No, there is no registration fee for participating in the robotics event."
+    },
+    {
+        "id": 6,
+        "question": "What are the rules for the competition?",
+        "answer": "The rules for the competition are available on the event page on the college website."
+    },
+    {
+        "id": 7,
+        "question": "Are there any prizes for the winners?",
+        "answer": "Yes, there are exciting prizes for the winners of the robotics event."
+    },
+    {
+        "id": 8,
+        "question": "Can I participate in multiple events?",
+        "answer": "Yes, you can participate in multiple events as long as the timings do not clash."
+    }
+]

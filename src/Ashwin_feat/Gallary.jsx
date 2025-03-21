@@ -36,7 +36,7 @@ function Gallery() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [length]);
+  }, [length ,current]);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
