@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 // Import images from assets/gallery
 import img1 from "../assets/gallery/image1.jpg";
@@ -15,14 +17,25 @@ const images = [img1, img2, img3, img4, img5, img6, img7];
 function Gallery() {
   const [current, setCurrent] = useState(0);
   const length = images.length;
-
-  // Auto-switch images every 3 seconds
+  const gallRef = useRef();
+  useGSAP(() => {
+    gsap.from(gallRef.current, {
+      scrollTrigger: {
+        trigger: gallRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      delay: 0.33,
+    });
+  });
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
     }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, [length]);
 
   const nextSlide = () => {
@@ -41,7 +54,10 @@ function Gallery() {
         </button>
       </div>
 
-      <div className="relative w-full max-w-3xl h-80 overflow-hidden rounded-lg shadow-lg">
+      <div
+        ref={gallRef}
+        className="relative w-full max-w-3xl h-80 overflow-hidden rounded-lg shadow-lg"
+      >
         {/* Slide Transition */}
         <motion.img
           key={current}

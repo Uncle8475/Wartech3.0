@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import aitimg from "../assets/aitcampus-C7eKMdt2.jpg";
 import wave from "../assets/customdiv.svg";
 import AboutUs from "./AboutUs";
 import Gallary from "./Gallary";
 import Marquee from "../Shubham_features/Marquee";
 import CountdownTimer from "../Shubham_features/CountdownTimer";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Home = () => {
+  const mainHeadRefs = useRef([]); // Store multiple refs
+
+  useGSAP(() => {
+    gsap.from(mainHeadRefs.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1.5,
+      stagger: 0.3,
+      delay: 1.4,
+      ease: "power2.out",
+    });
+  });
+
   return (
     <>
       <div
@@ -19,10 +34,16 @@ const Home = () => {
         {/* Content (Ensures it's above overlay) */}
         <div className="relative z-10">
           <CountdownTimer targetDate="2025-04-03T23:59:59" />
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-7xl font-thin text-white shadow-lg">
+          <p
+            ref={(el) => (mainHeadRefs.current[0] = el)}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-7xl font-thin text-white shadow-lg"
+          >
             Center of Excellence for
           </p>
-          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          <p
+            ref={(el) => (mainHeadRefs.current[1] = el)}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white"
+          >
             AI and Robotics
           </p>
         </div>
@@ -33,9 +54,8 @@ const Home = () => {
           className="absolute bottom-0 left-0 w-full -mb-8"
           alt="Wave Boundary"
         />
-        <Marquee text="Wartech 3.0 Coming soon! Stay Tuned 3rd March - 6th March 2025. 🚀" />
       </div>
-
+      <Marquee />
       <AboutUs />
       <Gallary />
     </>
