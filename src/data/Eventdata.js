@@ -90,7 +90,7 @@ const roboticsEvents = [
   },
   {
     id: 6,
-    title: "3D Printing",
+    title: "Robo Sumo",
     arena: "Workshop area with 3D printers",
     teamComposition: "Open participation",
     robotMatchRules: "Participants learn about and operate 3D printers",

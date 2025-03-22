@@ -233,9 +233,9 @@ const Wartech = () => {
           {/* Events List - Moves Right on Scroll  */}
           <div
             ref={eventsListRef}
-            className="events-container  h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-10"
+            className="events-container   h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-10"
           >
-            <p className="flex gap-20 text-9xl font-bold">
+            <p className="flex gap-10 text-9xl font-bold">
               <span>EVENTS</span>
               <span>EVENTS</span>
               <span>EVENTS</span>
@@ -244,7 +244,7 @@ const Wartech = () => {
               <span>EVENTS</span>
             </p>
 
-            <div className="flex gap-10 flex-wrap ">
+            <div className="gap-10  flex justify-center flex-wrap ">
               {eventImages.map((event, index) => (
                 <FlipCard
                   key={index}
