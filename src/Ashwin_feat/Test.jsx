@@ -1,6 +1,6 @@
 import React from "react";
 // import Squares from "../assets/background/Aurora";
-import MetaBalls from "../Shubham_features/metaball/metabals";
+
 import Aurora from "../assets/background/Aurora";
 const FlipCard = ({ image, title, description }) => {
   return (
