@@ -38,7 +38,7 @@ const AboutUs = () => {
     <>
       <section
         id="about"
-        className="text-white py-16 px-6 md:px-12 min-h-screen"
+        className="text-white py-24 px-6 md:px-12 min-h-screen"
       >
         <div className="flex justify-center pb-20 mb-6">
           <button className="px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">

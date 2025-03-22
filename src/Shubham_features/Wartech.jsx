@@ -8,15 +8,16 @@ import { Link } from "react-router-dom";
 import ClockCountDown from "./ClockCountDown";
 import WartechNav from "./WartechNav";
 import rocketImg from "/event_images/rocket.png";
-
-
+import ImagePopup from "./PopUp";
+import FlipCard from "./FlipCard";
+import SponsersMar from "./SponsersMar";
 gsap.registerPlugin(ScrollTrigger);
 
 const eventImages = [
   {
     name: "RC Racing",
     title: "RC Racing",
-    image: "rcRacing.jpg",
+    image: "rccar.png",
     registerLink: "/register/rcRacing",
     about:
       "Race your RC cars on a challenging track and compete for the fastest time.",
@@ -24,7 +25,7 @@ const eventImages = [
   {
     name: "Drone Drag",
     title: "Drone Racing",
-    image: "droneDrag.jpg",
+    image: "drone.png",
     registerLink: "/register/droneDrag",
     about: "Test your drone's speed and agility in a thrilling drag race.",
   },
@@ -39,7 +40,7 @@ const eventImages = [
   {
     name: "Pick and Place",
     title: "Pick and Place Challenge",
-    image: "pickAndPlace.jpg",
+    image: "pick.png",
     registerLink: "/register/pickAndPlace",
     about:
       "Build a robot that can pick up objects and place them in designated areas.",
@@ -47,18 +48,10 @@ const eventImages = [
   {
     name: "Robo Sumo",
     title: "Robo Sumo",
-    image: "roboSumo.jpg",
+    image: "sumo.png",
     registerLink: "/register/roboSumo",
     about:
       "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
-  },
-  {
-    name: "RC Racing",
-    title: "RC Racing",
-    image: "rcRacing.jpg",
-    registerLink: "/register/rcRacing",
-    about:
-      "Race your RC cars on a challenging track and compete for the fastest time.",
   },
 ];
 
@@ -81,7 +74,7 @@ const Wartech = () => {
   useEffect(() => {
     if (!loading) {
       gsap.to(eventsListRef.current, {
-        x: "-70%", // Moves to the right
+        x: "-45%", // Moves to the right
         color: "rgba(0,0,0)",
         backgroundColor: "rgba(225,225,225)",
         ease: "power2.out",
@@ -129,7 +122,7 @@ const Wartech = () => {
             scrub: 2, // Smooth animation while scrolling
             markers: false, // Debug markers (set true for testing)
           },
-        } 
+        }
       );
 
       gsap.fromTo(
@@ -204,49 +197,44 @@ const Wartech = () => {
               alt=""
             />
 
-
             <div className="h-screen w-screen p-10 content-center">
               <div className="w-full flex flex-col items-start">
                 <h1 className="text-amber-200 md:text-[4rem] max-w-full text-left">
                   Prize Pool of 2 lac+
                 </h1>
-                <button className="bg-rose-700 text-white px-3 py-2 rounded-md mt-10 w-1/5">
-                  See more
-                </button>
+                <ImagePopup imageUrl="/public/Docs/file_2025-03-21_23.33.40.png" />
               </div>
             </div>
-
 
             <div className="h-screen w-screen p-10 content-center">
               <div className="w-full flex flex-col items-end">
                 <h1 className="text-lime-400 md:text-[4rem] w-5/12 text-right ">
                   More than 13+ Events{" "}
                 </h1>
-                <button className="bg-rose-700 text-white px-3 py-2 w-1/5 rounded-md mt-10 ">
-                  See more
-                </button>
+                <ImagePopup imageUrl={"/public/Docs/poster final.png"} />
               </div>
             </div>
 
-
             <div className="h-screen w-screen p-10 content-center">
-              <div  className="w-full flex flex-col items-start">
-              <h1 className="text-teal-200 md:text-[4rem] leading-snug w-5/12 text-left">
-                Both for College and School Students
-              </h1>
-              <button className="bg-rose-700 text-white px-3 py-2 rounded-md mt-10 w-1/5 ">
-                See more
-              </button>
+              <div className="w-full flex flex-col items-start">
+                <h1 className="text-teal-200 md:text-[4rem] leading-snug w-5/12 text-left">
+                  Both for College and School Students
+                </h1>
+                <ImagePopup
+                  imageUrl={
+                    "/public/Docs/WhatsApp Image 2025-03-22 at 05.04.34_d01db75e.jpg"
+                  }
+                />
               </div>
             </div>
           </div>
 
           {/* Events List - Moves Right on Scroll  */}
+          {/* Events List - Moves Right on Scroll  */}
           <div
             ref={eventsListRef}
-            className="events-container h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-10"
+            className="events-container  h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-10"
           >
-            {" "}
             <p className="flex gap-20 text-9xl font-bold">
               <span>EVENTS</span>
               <span>EVENTS</span>
@@ -254,46 +242,24 @@ const Wartech = () => {
               <span>EVENTS</span>
               <span>EVENTS</span>
               <span>EVENTS</span>
-              <span>EVENTS</span>
-              <span>EVENTS</span>
-              <span>EVENTS</span>
-              <span>EVENTS</span>
-              <span>EVENTS</span>
-              <span>EVENTS</span>
             </p>
-            {eventImages.map((event, index) => (
-              <div
-                key={index}
-                className="relative h-4/6 w-[1000px] bg-red-900 inline-block m-5 rounded-xl overflow-hidden"
-              >
-                <motion.img
-                  src={`/event_images/${event.image}`}
-                  //  Extracts filename for alt text
-                  className="h-5/6 w-[1000px] object-cover hover:scale-110 transition duration-300"
-                  whileHover={{ scale: 1.1 }}
+
+            <div className="flex gap-10 flex-wrap ">
+              {eventImages.map((event, index) => (
+                <FlipCard
+                  key={index}
+                  title={event.title}
+                  image={`/event_images/${event.image}`}
+                  registerLink={event.registerLink}
+                  about={event.about}
                 />
-                <h3 className="p-3 font-thin text-xl text-white">
-                  Register To Participate
-                </h3>
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-r from-red-900 to-blue-900 opacity-0 hover:opacity-70 transition duration-300">
-                  <h3 className="text-white text-2xl">
-                    {index + 1}. {event.name}{" "}
-                  </h3>
-                  <h5 className="p-3 text-lg text-white ">{event.about}</h5>
-                  <Link
-                    to={`/events/${event.title}`}
-                    className="ml-4 px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold rounded-full opacity-100 hover:from-green-500 hover:to-blue-600 transition duration-300"
-                  >
-                    Register Now
-                  </Link>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* FAQ Section */}
           <FAQ />
-
+          <SponsersMar />
           {/* Background Video */}
           <section className="fixed top-0 left-0 w-full h-full z-[-1]">
             <video

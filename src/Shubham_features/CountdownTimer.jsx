@@ -10,7 +10,7 @@ export default function CountdownTimer({ targetDate }) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        minutes: Math.floor((difference / (1000 * 60)) % 60), // Fixed the extra parenthesis
         seconds: Math.floor((difference / 1000) % 60),
       };
     } else {
@@ -31,15 +31,42 @@ export default function CountdownTimer({ targetDate }) {
   return (
     <motion.div
       initial={{ opacity: 1 }}
-      animate={{ y: [0, -10, 0] }} // Bounce effect
+      animate={{ y: [0, -10, 0] }}
       transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-      className="fixed bottom-4 right-4 z-10 h-20 bg-white/40 text-black flex flex-col items-center justify-center font-bold backdrop-blur-md p-3 rounded-lg shadow-lg text-lg"
+      className="fixed bottom-4 right-4 z-10 bg-white/20 backdrop-blur-md p-4 rounded-lg shadow-lg border border-white/10"
     >
-      <h3 className="bg-gradient-to-r text-xl from-purple-900 via-orange-600 to-red-500 bg-clip-text text-transparent">
-        WARTECH LAUNCH
+      <h3 className="text-sm font-semibold text-gray-800 mb-2">
+        WARTECH LAUNCH IN
       </h3>
-      {timeLeft.days}days : {timeLeft.hours} hours : {timeLeft.minutes} mins :{" "}
-      {timeLeft.seconds}s
+      <div className="flex items-center gap-2">
+        <div className="text-center">
+          <span className="text-2xl font-bold text-gray-900">
+            {timeLeft.days}
+          </span>
+          <span className="text-xs text-gray-600 block">DAYS</span>
+        </div>
+        <span className="text-xl text-gray-500">:</span>
+        <div className="text-center">
+          <span className="text-2xl font-bold text-gray-900">
+            {timeLeft.hours}
+          </span>
+          <span className="text-xs text-gray-600 block">HOURS</span>
+        </div>
+        <span className="text-xl text-gray-500">:</span>
+        <div className="text-center">
+          <span className="text-2xl font-bold text-gray-900">
+            {timeLeft.minutes}
+          </span>
+          <span className="text-xs text-gray-600 block">MINS</span>
+        </div>
+        <span className="text-xl text-gray-500">:</span>
+        <div className="text-center">
+          <span className="text-2xl font-bold text-gray-900">
+            {timeLeft.seconds}
+          </span>
+          <span className="text-xs text-gray-600 block">SECS</span>
+        </div>
+      </div>
     </motion.div>
   );
 }

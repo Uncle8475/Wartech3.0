@@ -3,7 +3,7 @@ import aitimg from "../assets/aitcampus-C7eKMdt2.jpg";
 import wave from "../assets/customdiv.svg";
 import AboutUs from "./AboutUs";
 import Gallary from "./Gallary";
-import Marquee from "../Shubham_features/Marquee";
+// import Marquee from "../Shubham_features/Marquee";
 import CountdownTimer from "../Shubham_features/CountdownTimer";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -33,7 +33,6 @@ const Home = () => {
 
         {/* Content (Ensures it's above overlay) */}
         <div className="relative z-10">
-          <CountdownTimer targetDate="2025-04-03T23:59:59" />
           <p
             ref={(el) => (mainHeadRefs.current[0] = el)}
             className="text-xl sm:text-2xl md:text-3xl lg:text-7xl font-thin text-white shadow-lg"
@@ -51,11 +50,11 @@ const Home = () => {
         {/* Wave acting as a bottom boundary */}
         <img
           src={wave}
-          className="absolute bottom-0 left-0 w-full -mb-8"
+          className="absolute  left-0 w-full bottom-[-90px]"
           alt="Wave Boundary"
         />
       </div>
-      <Marquee />
+      {/* <Marquee /> */}
       <AboutUs />
       <Gallary />
     </>

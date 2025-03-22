@@ -19,7 +19,7 @@ function Events() {
         id="events"
         className=" w-full h-screen flex flex-col items-center justify-center text-white text-center p-8"
       >
-        <button className=" px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
+        <button className=" px-8 py-0 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
           Events
         </button>
         <h1 className=" pt-10 text-5xl font-bold mt-4">WARTECH</h1>
