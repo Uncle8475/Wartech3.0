@@ -244,7 +244,7 @@ const Wartech = () => {
                 </h1>
                 <ImagePopup
                   imageUrl={
-                    "/public/Docs/WhatsApp Image 2025-03-22 at 05.04.34_d01db75e.jpg"
+                    "/Docs/WhatsApp Image 2025-03-22 at 05.04.34_d01db75e.jpg"
                   }
                 />
               </div>
