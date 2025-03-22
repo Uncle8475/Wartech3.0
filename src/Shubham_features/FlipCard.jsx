@@ -15,14 +15,15 @@ const FlipCard = ({ image, title, registerLink, about }) => {
         <div className="flip-card-back">
           <h3 className="flip-card-title">{title}</h3>
           <p className="flip-card-description">{about}</p>
-          <a
-            href={registerLink}
-            className="flip-card-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Register Now
-          </a>
+          <button className="flip-card-button">
+            <a
+              href={registerLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register Now
+            </a>
+          </button>
         </div>
       </div>
     </div>

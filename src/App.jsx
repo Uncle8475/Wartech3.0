@@ -10,6 +10,7 @@ import EventInfo from "./Ashwin_feat/EventInfo";
 import "./Font.css";
 import Test from "./Ashwin_feat/Test";
 import EventDetail from "./Ashwin_feat/EventData";
+import BlogPage from "./Shubham_features/BlogPage";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/Events" element={<Event />} />
         <Route path="/Milestones" element={<Milestones />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/Blogs" element={<BlogPage />} />
         <Route path="/events/:eventName" element={<EventDetail />} />
         <Route path="/register/:eventName" element={<EventInfo />} />
       </Route>

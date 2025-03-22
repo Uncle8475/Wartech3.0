@@ -60,7 +60,7 @@
 
 /* Back Side */
 .flip-card-back {
-  background: #333136; /* Dark Gray */
+  background: linear-gradient(135deg, #900e15 , #33098f); /* Gradient from Dark Gray to Grayish Purple */
   color: #e9e8ee; /* Light Gray */
   text-align: center;
   transform: rotateY(180deg);
@@ -82,8 +82,8 @@
 /* Button */
 .flip-card-button {
   padding: 12px 20px;
-  background-color: #b4b1b8; /* Silver */
-  color: #101b39; /* Deep Navy */
+  background-color: #008000; /* Gradient from Green to Lime Yellow */
+  color: #fafafa; /* Deep Navy */
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;

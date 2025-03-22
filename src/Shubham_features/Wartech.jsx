@@ -48,6 +48,27 @@ const eventImages = [
     about:
       "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
   },
+  {
+    name: "Robo Sumo",
+    title: "Robo Sumo",
+    image: "sumo.png",
+    about:
+      "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
+  },
+  {
+    name: "Robo Sumo",
+    title: "Robo Sumo",
+    image: "sumo.png",
+    about:
+      "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
+  },
+  {
+    name: "Robo Sumo",
+    title: "Robo Sumo",
+    image: "sumo.png",
+    about:
+      "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
+  },
 ];
 
 const Wartech = () => {
@@ -68,7 +89,7 @@ const Wartech = () => {
   useEffect(() => {
     if (!loading) {
       gsap.to(eventsListRef.current, {
-        x: "-45%",
+        x: "-50%",
         color: "rgba(0,0,0)",
         backgroundColor: "rgba(225,225,225)",
         ease: "power2.out",
@@ -76,7 +97,7 @@ const Wartech = () => {
           trigger: eventsListRef.current,
           scroller: "body",
           start: "top 0%",
-          end: "top -150%",
+          end: "top -550%",
           scrub: 2,
           pin: true,
           markers: false,
@@ -175,6 +196,15 @@ const Wartech = () => {
             >
               3<sup>rd</sup> - 6<sup>th</sup> April
             </motion.h3>
+
+            <motion.button className="bg-[#a5205c] overflow-visible mt-20 font-semibold text-white px-3 py-2 rounded-md hover:bg-transparent hover:border-[#892370] hover:border hover:text-[#962c6a] relative group ">
+              {/* <a href="/Docs/Brochure.pdf" download="Brochure.pdf"> */}
+                Event Schedule
+              {/* </a> */}
+              <span className="absolute top-1/2 left-[105%]  bg-white text-black text-xs px-2 py-1 w-fit whitespace-nowrap rounded opacity-0 group-hover:opacity-100 transition delay-200">
+                Releasing Soon
+              </span>
+            </motion.button>
           </div>
 
           {/* prize pool reveal */}
@@ -233,9 +263,10 @@ const Wartech = () => {
               <span>EVENTS</span>
               <span>EVENTS</span>
               <span>EVENTS</span>
+              <span>EVENTS</span>
             </p>
 
-            <div className="gap-4 md:gap-10 flex justify-center flex-wrap">
+            <div className="gap-4 md:gap-10 flex justify-evenly  flex-wrap">
               {eventImages.map((event, index) => (
                 <FlipCard
                   key={index}
