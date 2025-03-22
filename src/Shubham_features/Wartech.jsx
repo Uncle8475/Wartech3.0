@@ -199,7 +199,7 @@ const Wartech = () => {
 
             <motion.button className="bg-[#a5205c] overflow-visible mt-20 font-semibold text-white px-3 py-2 rounded-md hover:bg-transparent hover:border-[#892370] hover:border hover:text-[#962c6a] relative group ">
               {/* <a href="/Docs/Brochure.pdf" download="Brochure.pdf"> */}
-                Event Schedule
+              Event Schedule
               {/* </a> */}
               <span className="absolute top-1/2 left-[105%]  bg-white text-black text-xs px-2 py-1 w-fit whitespace-nowrap rounded opacity-0 group-hover:opacity-100 transition delay-200">
                 Releasing Soon
@@ -224,7 +224,7 @@ const Wartech = () => {
                 <h1 className="text-amber-200 text-2xl md:text-4xl lg:text-6xl max-w-full text-left">
                   Prize Pool of 2 lac+
                 </h1>
-                <ImagePopup imageUrl="/public/Docs/file_2025-03-21_23.33.40.png" />
+                <ImagePopup imageUrl="/Docs/file_2025-03-21_23.33.40.png" />
               </div>
             </div>
 
@@ -233,7 +233,7 @@ const Wartech = () => {
                 <h1 className="text-lime-400 text-2xl md:text-4xl lg:text-6xl w-full md:w-5/12 text-right">
                   More than 13+ Events
                 </h1>
-                <ImagePopup imageUrl={"/public/Docs/poster final.png"} />
+                <ImagePopup imageUrl={"/Docs/poster final.png"} />
               </div>
             </div>
 
