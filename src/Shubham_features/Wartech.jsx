@@ -18,7 +18,6 @@ const eventImages = [
     name: "RC Racing",
     title: "RC Racing",
     image: "rccar.png",
-
     about:
       "Race your RC cars on a challenging track and compete for the fastest time.",
   },
@@ -26,14 +25,12 @@ const eventImages = [
     name: "Drone Drag",
     title: "Drone Racing",
     image: "drone.png",
-
     about: "Test your drone's speed and agility in a thrilling drag race.",
   },
   {
     name: "Line Follower",
     title: "Maze Solver",
     image: "lineFollower.jpg",
-
     about:
       "Program your robot to follow a line and navigate through obstacles.",
   },
@@ -41,7 +38,6 @@ const eventImages = [
     name: "Pick and Place",
     title: "Pick and Place Challenge",
     image: "pick.png",
-
     about:
       "Build a robot that can pick up objects and place them in designated areas.",
   },
@@ -49,7 +45,6 @@ const eventImages = [
     name: "Robo Sumo",
     title: "Robo Sumo",
     image: "sumo.png",
-
     about:
       "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
   },
@@ -63,18 +58,17 @@ const Wartech = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Ensure the loader is visible for at least 2 seconds
     const timer = setTimeout(() => {
       setLoading(false);
     }, 4000);
 
-    return () => clearTimeout(timer); // Cleanup timeout on unmount
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
     if (!loading) {
       gsap.to(eventsListRef.current, {
-        x: "-45%", // Moves to the right
+        x: "-45%",
         color: "rgba(0,0,0)",
         backgroundColor: "rgba(225,225,225)",
         ease: "power2.out",
@@ -83,9 +77,9 @@ const Wartech = () => {
           scroller: "body",
           start: "top 0%",
           end: "top -150%",
-          scrub: 2, // Smooth animation while scrolling
+          scrub: 2,
           pin: true,
-          markers: false, // Debug markers (set true for testing)
+          markers: false,
         },
       });
 
@@ -101,8 +95,7 @@ const Wartech = () => {
             scroller: "body",
             start: "top 75%",
             end: "top 60%",
-            // scrub: 2, // Smooth animation while scrolling
-            markers: false, // Debug markers (set true for testing)
+            markers: false,
           },
         }
       );
@@ -119,8 +112,8 @@ const Wartech = () => {
             start: "top 0%",
             end: "top -520%",
             pin: true,
-            scrub: 2, // Smooth animation while scrolling
-            markers: false, // Debug markers (set true for testing)
+            scrub: 2,
+            markers: false,
           },
         }
       );
@@ -129,7 +122,6 @@ const Wartech = () => {
         announcementRef.current,
         { backgroundColor: "transparent" },
         {
-          // background:0.7,
           backgroundColor: "#040812",
           ease: "power2.in",
           scrollTrigger: {
@@ -137,40 +129,40 @@ const Wartech = () => {
             scroller: "body",
             start: "top 20%",
             end: "top -50%",
-            scrub: 2, // Smooth animation while scrolling
-            markers: false, // Debug markers (set true for testing)
+            scrub: 2,
+            markers: false,
           },
         }
       );
 
       return () => {
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Cleanup on unmount
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       };
     }
-  }, [loading]); // Runs only after the loader finishes
+  }, [loading]);
 
   return (
-    <div className="h-full w-full ">
+    <div className="h-full w-full">
       {loading ? (
         <PageLoader />
       ) : (
         <>
           <WartechNav />
-          <div className="h-screen flex items-center justify-center bg-transparent flex-col ">
+          <div className="h-screen flex items-center justify-center bg-transparent flex-col">
             <motion.div
               className="opacity-0"
               animate={{ opacity: [0, 1] }}
               transition={{ duration: 3, delay: 3 }}
             >
               <img
-                className="h-32 object-contain"
+                className="h-20 md:h-32 object-contain"
                 src="unstop_logo.png"
                 alt=""
               />
-              <h5 className="text-center">co-sponsor</h5>
+              <h5 className="text-center text-sm md:text-base">co-sponsor</h5>
             </motion.div>
             <motion.h1
-              className="text-6xl md:text-9xl uppercase font-extrabold drop-shadow-2xl text-white"
+              className="text-4xl md:text-6xl lg:text-9xl uppercase font-extrabold drop-shadow-2xl text-white"
               animate={{ scale: [2.5, 1] }}
               transition={{ duration: 4 }}
             >
@@ -179,7 +171,7 @@ const Wartech = () => {
             <ClockCountDown />
             <motion.h3
               ref={dateRef}
-              className="text-2xl md:text-4xl mt-10 font-extrabold drop-shadow-2xl text-white"
+              className="text-xl md:text-2xl lg:text-4xl mt-10 font-extrabold drop-shadow-2xl text-white"
             >
               3<sup>rd</sup> - 6<sup>th</sup> April
             </motion.h3>
@@ -188,36 +180,36 @@ const Wartech = () => {
           {/* prize pool reveal */}
           <div
             ref={announcementRef}
-            className="relative flex  items-center justify-center bg-amber-100  flex-col"
+            className="relative flex items-center justify-center bg-amber-100 flex-col"
           >
             <img
               ref={rocketRef}
-              className="rocket  object-cover h-[110vh]"
+              className="rocket object-cover h-[110vh]"
               src={rocketImg}
               alt=""
             />
 
-            <div className="h-screen w-screen p-10 content-center">
+            <div className="h-screen w-screen p-4 md:p-10 content-center">
               <div className="w-full flex flex-col items-start">
-                <h1 className="text-amber-200 md:text-[4rem] max-w-full text-left">
+                <h1 className="text-amber-200 text-2xl md:text-4xl lg:text-6xl max-w-full text-left">
                   Prize Pool of 2 lac+
                 </h1>
                 <ImagePopup imageUrl="/public/Docs/file_2025-03-21_23.33.40.png" />
               </div>
             </div>
 
-            <div className="h-screen w-screen p-10 content-center">
+            <div className="h-screen w-screen p-4 md:p-10 content-center">
               <div className="w-full flex flex-col items-end">
-                <h1 className="text-lime-400 md:text-[4rem] w-5/12 text-right ">
-                  More than 13+ Events{" "}
+                <h1 className="text-lime-400 text-2xl md:text-4xl lg:text-6xl w-full md:w-5/12 text-right">
+                  More than 13+ Events
                 </h1>
                 <ImagePopup imageUrl={"/public/Docs/poster final.png"} />
               </div>
             </div>
 
-            <div className="h-screen w-screen p-10 content-center">
+            <div className="h-screen w-screen p-4 md:p-10 content-center">
               <div className="w-full flex flex-col items-start">
-                <h1 className="text-teal-200 md:text-[4rem] leading-snug w-5/12 text-left">
+                <h1 className="text-teal-200 text-2xl md:text-4xl lg:text-6xl w-full md:w-5/12 text-left">
                   Both for College and School Students
                 </h1>
                 <ImagePopup
@@ -229,13 +221,12 @@ const Wartech = () => {
             </div>
           </div>
 
-          {/* Events List - Moves Right on Scroll  */}
-          {/* Events List - Moves Right on Scroll  */}
+          {/* Events List - Moves Right on Scroll */}
           <div
             ref={eventsListRef}
-            className="events-container   h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-10"
+            className="events-container h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-4 md:mx-10"
           >
-            <p className="flex gap-10 text-9xl font-bold">
+            <p className="flex gap-4 md:gap-10 text-4xl md:text-6xl lg:text-9xl font-bold">
               <span>EVENTS</span>
               <span>EVENTS</span>
               <span>EVENTS</span>
@@ -244,7 +235,7 @@ const Wartech = () => {
               <span>EVENTS</span>
             </p>
 
-            <div className="gap-10  flex justify-center flex-wrap ">
+            <div className="gap-4 md:gap-10 flex justify-center flex-wrap">
               {eventImages.map((event, index) => (
                 <FlipCard
                   key={index}
