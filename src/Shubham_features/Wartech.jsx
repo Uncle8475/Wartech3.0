@@ -18,7 +18,7 @@ const eventImages = [
     name: "RC Racing",
     title: "RC Racing",
     image: "rccar.png",
-    registerLink: "/register/rcRacing",
+
     about:
       "Race your RC cars on a challenging track and compete for the fastest time.",
   },
@@ -26,14 +26,14 @@ const eventImages = [
     name: "Drone Drag",
     title: "Drone Racing",
     image: "drone.png",
-    registerLink: "/register/droneDrag",
+
     about: "Test your drone's speed and agility in a thrilling drag race.",
   },
   {
     name: "Line Follower",
     title: "Maze Solver",
     image: "lineFollower.jpg",
-    registerLink: "/register/lineFollower",
+
     about:
       "Program your robot to follow a line and navigate through obstacles.",
   },
@@ -41,7 +41,7 @@ const eventImages = [
     name: "Pick and Place",
     title: "Pick and Place Challenge",
     image: "pick.png",
-    registerLink: "/register/pickAndPlace",
+
     about:
       "Build a robot that can pick up objects and place them in designated areas.",
   },
@@ -49,7 +49,7 @@ const eventImages = [
     name: "Robo Sumo",
     title: "Robo Sumo",
     image: "sumo.png",
-    registerLink: "/register/roboSumo",
+
     about:
       "Compete in a sumo-style match with your robot and push your opponent out of the ring.",
   },
@@ -250,7 +250,7 @@ const Wartech = () => {
                   key={index}
                   title={event.title}
                   image={`/event_images/${event.image}`}
-                  registerLink={event.registerLink}
+                  registerLink={`register/${event.title}`}
                   about={event.about}
                 />
               ))}

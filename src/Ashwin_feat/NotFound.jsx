@@ -11,7 +11,9 @@ export default function NotFound() {
         className="max-w-md"
       >
         <h1 className="text-6xl font-bold text-gray-800">404</h1>
-        <p className="text-xl text-gray-600 mt-4">Oops! The page you're looking for doesn't exist.</p>
+        <p className="text-xl text-gray-600 mt-4">
+          Oops! The page you're looking for doesn't exist.
+        </p>
         <img
           src="https://static.vecteezy.com/system/resources/previews/008/255/803/non_2x/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.jpg"
           alt="Not Found"

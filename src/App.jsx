@@ -9,6 +9,7 @@ import Event from "./Ashwin_feat/Events";
 import EventInfo from "./Ashwin_feat/EventInfo";
 import "./Font.css";
 import Test from "./Ashwin_feat/Test";
+import EventDetail from "./Ashwin_feat/EventData";
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
         <Route path="/Events" element={<Event />} />
         <Route path="/Milestones" element={<Milestones />} />
         <Route path="/test" element={<Test />} />
-        <Route path="/events/:eventName" element={<EventInfo />} />
+        <Route path="/events/:eventName" element={<EventDetail />} />
+        <Route path="/register/:eventName" element={<EventInfo />} />
       </Route>
       <Route path="/Wartech" element={<Wartech />} />
       <Route path="*" element={<NotFound />} />

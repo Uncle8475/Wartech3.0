@@ -77,7 +77,7 @@ const EventInfo = () => {
   }
 
   const event = roboticsEvents.find(
-    (e) => e.title.toLowerCase() === eventName.toLowerCase()
+    (e) => e.title.toLowerCase().trim() === eventName.toLowerCase().trim()
   );
 
   if (!event) {
@@ -141,9 +141,7 @@ const EventInfo = () => {
             ))}
           </div>
         ) : (
-          <p className="text-gray-400 text-center mt-4">
-            No additional images available.
-          </p>
+          <p className="text-gray-400 text-center mt-4"></p>
         )}
 
         {/* Event Details */}
