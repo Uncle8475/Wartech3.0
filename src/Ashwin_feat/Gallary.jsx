@@ -47,7 +47,7 @@ function Gallery() {
   };
 
   return (
-    <div className="bg-[#0d0d0d] container mb-20 mx-auto px-4 py-10 flex flex-col items-center">
+    <div className="bg-zinc-950 container  mx-auto px-4 py-20 flex flex-col items-center">
       <div className="flex justify-center pb-20 mb-1">
         <button className="px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
           Gallary

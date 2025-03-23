@@ -92,7 +92,7 @@ const EventInfo = () => {
     <>
       <div
         ref={containerRef}
-        className="space-y-12 min-h-screen flex flex-col items-center px-6 py-12 md:px-16 text-white pt-40 pb-20"
+        className="space-y-12 min-h-screen flex flex-col items-center px-6 py-12 md:px-16 text-white pt-40 pb-20 "
       >
         {/* Event Title */}
         <h2 ref={titleRef} className="tracking-wider text-5xl mb-1 text-center">
@@ -124,6 +124,15 @@ const EventInfo = () => {
             Register
           </a>
         </div>
+        <a
+            href="#contact"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-orange-600 text-white font-semibold rounded-md transition-transform duration-200 hover:bg-yellow-600 hover:scale-105"
+          >
+            Organizer Details 
+          </a>
+
+
 
         {/* Extra Images */}
         {event.extraimg?.length > 0 ? (
@@ -167,7 +176,50 @@ const EventInfo = () => {
           ))}
         </div>
       </div>
-      <section className="fixed top-0 left-0 w-full h-full z-[-1]">
+      <div id="contact" className="w-screen flex flex-col items-center bg-zinc-950 p-10 border-t-2  border-zinc-100">
+        <h3 className="text-5xl font-semibold text-white mb-4 ">
+          Contact Details
+        </h3>
+        <div className="mt-12 w-10/12 text-center pb-10 text-zinc-150 flex flex-col gap-2 md:flex-row justify-around items-center">
+            {event.contacts.map((contact, index) => (
+              <div key={index} className="relative flex border-2 p-10 rounded-md gap-10 items-center justify-center space-y-1">
+                <div
+                  
+                  className="flex flex-col items-center justify-center space-y-1"
+                >
+                  <h4 className="text-2xl font-semibold">{contact.name}</h4>
+                  <p className="text-base">{contact.role}</p>
+                  <a href={contact.whatsapp_link}>
+                    <p className="text-base">{contact.number}</p>
+                  </a>
+                  <p className="text-base">{contact.email}</p>
+                </div>
+                <img
+                  className="rounded-lg object-contain h-48"
+                  src={contact.photo_link}
+                  alt=""
+                />
+                <span className="absolute bottom-1 text-xs text-green-700"> * you can contact us on whatsapp by clicking on number</span>
+              </div>
+            ))}
+            
+          </div>
+          <a
+            href={''}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-green-600 text-white font-semibold rounded-md transition-transform duration-200 hover:bg-green-700 hover:scale-105 flex items-center"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp Icon"
+              className="w-6 h-6 mr-2"
+            />
+            Join WhatsApp Group
+          </a>
+        </div>
+
+      <section className="fixed top-0 left-0 w-full h-full z-[-1] bg-zinc-950">
         <Aurora
           colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
           blend={0.5}

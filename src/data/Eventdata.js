@@ -25,6 +25,7 @@ const roboticsEvents = [
     extraimg: [soccer1, soccer2],
     description:
       "RoboSoccer is a competitive event where manually controlled robots score goals while defending their own.",
+    contacts: [],
   },
   {
     id: 2,
@@ -41,6 +42,28 @@ const roboticsEvents = [
     backgroundImage: back1, // Background Image
     description:
       "An arena with obstacles where bots must pick up objects and strategically place them at designated locations.",
+    contacts: [
+      {
+        id: 1,
+        name: "Rohit Parihar",
+        event: "Robo Clench(College, School) 2025",
+        role: "Event Head",
+        photo_link:
+          " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP4fNghY7Kx6eP79gmdp6YhesUm6GZGL53Rw&s ",
+        number: "9351156154",
+        whatsapp_link: "https://wa.me/9351156154",
+      },
+      {
+        id: 2,
+        name: "Abhi Sirohi",
+        event: "Robo Soccer (College) 2025",
+        role: "Organizer",
+        photo_link:
+          " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP4fNghY7Kx6eP79gmdp6YhesUm6GZGL53Rw&s ",
+        number: "8171502075",
+        whatsapp_link: "https://wa.me/8171502075",
+      },
+    ],
   },
   {
     id: 3,
@@ -56,6 +79,7 @@ const roboticsEvents = [
     backgroundImage: back1, // Background Image
     description:
       "An aerial obstacle course where drones compete to complete all obstacles in the shortest time.",
+    contacts: [],
   },
   {
     id: 4,
@@ -71,6 +95,7 @@ const roboticsEvents = [
     backgroundImage: back1, // Background Image
     description:
       "Participants race remote-controlled cars around a track, navigating various challenges.",
+    contacts: [],
   },
   {
     id: 5,
@@ -87,6 +112,7 @@ const roboticsEvents = [
     backgroundImage: back1, // Background Image
     description:
       "A large racing track where participants race to complete laps in the fastest time.",
+    contacts: [],
   },
   {
     id: 6,
@@ -101,34 +127,7 @@ const roboticsEvents = [
     backgroundImage: back1, // Background Image
     description:
       "Dive into the world of 3D printing, learning about layer-by-layer object creation from digital models.",
-  },
-  {
-    id: 7,
-    title: "Arduino Workshop",
-    arena: "Workshop area with Arduino kits",
-    teamComposition: "Open participation",
-    robotMatchRules: "Hands-on training with Arduino projects",
-    scoringAndPenalties: "Not applicable",
-    technicalAspects: "Basic programming in C/C++",
-    restrictions: "No pre-built circuits allowed",
-    img: b7,
-    backgroundImage: back1, // Background Image
-    description:
-      "Explore embedded systems and sensor technology in a hands-on Arduino workshop.",
-  },
-  {
-    id: 8,
-    title: "AI & Machine Learning",
-    arena: "Workshop area with computers",
-    teamComposition: "Open participation",
-    robotMatchRules: "Hands-on training with AI applications",
-    scoringAndPenalties: "Not applicable",
-    technicalAspects: "Python programming, TensorFlow basics",
-    restrictions: "No pre-trained models allowed",
-    img: b8,
-    backgroundImage: back1, // Background Image
-    description:
-      "A workshop covering AI and machine learning, including hands-on training with real-world data applications.",
+    contacts: [],
   },
 ];
 

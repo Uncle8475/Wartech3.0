@@ -1,42 +1,64 @@
 [
     {
         "id": 1,
-        "question": "What is the date of the robotics event?",
-        "answer": "The robotics event will be held on November 15th, 2023."
+        "question": "What is the date of  WARTECH 3.0?",
+        "answer": "The WARTECH 3.0 will be from April 3rd to 6th,2025 ."
     },
     {
         "id": 2,
         "question": "Where will the event take place?",
-        "answer": "The event will take place in the main auditorium of the college."
+        "answer": "The event will take place at Army Institute of Technology,Pune."
     },
     {
         "id": 3,
-        "question": "Who can participate in the robotics event?",
-        "answer": "All college students are eligible to participate in the robotics event."
+        "question": "Who can participate in the WARTECH 3.0?",
+        "answer": "All college and school students are eligible to participate in the respective robotics events of WARTECH 3.0."
     },
     {
         "id": 4,
         "question": "How can I register for the event?",
-        "answer": "You can register for the event by filling out the registration form available on the college website."
+        "answer": "You can register for the event by filling out the registration form available on club website."
     },
     {
         "id": 5,
         "question": "Is there any registration fee?",
-        "answer": "No, there is no registration fee for participating in the robotics event."
+        "answer": "Yes, there is  registration fee for participating in the WARTECH 3.0."
     },
     {
         "id": 6,
-        "question": "What are the rules for the competition?",
-        "answer": "The rules for the competition are available on the event page on the college website."
+        "question": "What are the rules for WARTECH 3.0?",
+        "answer": "The rulebook for WARTECH 3.0 is available on the event page on the club website."
     },
     {
         "id": 7,
         "question": "Are there any prizes for the winners?",
-        "answer": "Yes, there are exciting prizes for the winners of the robotics event."
+        "answer": "Yes, there is a prize pool of 2lac+ for the winners of the WARTECH 3.0."
     },
     {
         "id": 8,
         "question": "Can I participate in multiple events?",
         "answer": "Yes, you can participate in multiple events as long as the timings do not clash."
+    },
+    {
+        "id": 9,
+        "question": "What will be the date of school events?",
+        "answer": "These events will be on 3rd April,2025."
+    },
+    {
+        "id": 10,
+        "question": "What will be the date of event ROBO RACE,ROBO CLENCH?",
+        "answer": "These events will be on 4th April,2025."
+    },
+    {
+        "id": 11,
+        "question": "What will be the date of event ROBO SUMO,ROBO SOCCER?",
+        "answer": "These events will be on 5th April,2025."
+    },
+    
+    {
+        "id": 12,
+        "question": "What will be the date of event LINE TRACER,DRONE DRAG?",
+        "answer": "These events will be on 6th April,2025."
     }
+    
 ]

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import faqs from "../data/faqData.json";
+
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -10,68 +11,46 @@ const FAQ = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen bg-zinc-950 flex flex-col items-center justify-center px-6 py-12">
-      {/* Section Title */}
-      <h2 className="text-4xl md:text-6xl font-bold mb-10 text-center text-white">
+    <div className=" relative w-screen  bg-zinc-950 flex flex-col  p-10 pb-20 ">
+      <h2 className="text-6xl font-bold mb-4 text-center">
         Frequently Asked Questions
       </h2>
-
-      <div className="flex flex-col md:flex-row items-center justify-around w-full max-w-7xl relative z-10">
-        {/* Floating Image */}
+      <div className="w-full  overflow-visible flex flex-col md:flex-row  justify-around z-10">
         <motion.img
           src="event_images/SpaceSuit.png"
-          alt="Astronaut Suit"
-          className="w-64 md:w-1/3 h-auto object-cover rounded-lg drop-shadow-lg"
+          alt="space_suit"
+          className="w-1/3 h-1/2 my-auto object-cover rounded-lg"
           animate={{
-            y: [0, -10, 0],
-            rotate: [0, 1, -1, 0],
+            y: [0, -15, 0], // Moves up and down
           }}
           transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
+            duration: 2, // Smooth floating effect
+            repeat: Infinity, // Loops forever
+            ease: "easeInOut", // Smooth transition
           }}
         />
-
-        {/* FAQ List */}
-        <div className="w-full md:w-1/2 space-y-4 mt-10 md:mt-0">
+        <div className="space-y-4 w-full mt-10 md:w-1/2 flex flex-col items-center ">
           {faqs.map((faq, index) => (
-            <div key={index} className="w-full max-w-lg mx-auto">
+            <div
+              key={index}
+              className=" w-2/3 border rounded-lg overflow-hidden"
+            >
               <button
-                className="w-full p-4 text-left text-lg font-semibold bg-black text-white rounded-t-lg transition-all duration-300 hover:bg-gray-800"
+                className="w-full p-4 text-left font-semibold bg-black  hover:bg-gray-200 hover:text-black"
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
               </button>
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    className="p-4 bg-gray-700 text-gray-200 rounded-b-lg"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {faq.answer}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {openIndex === index && (
+                <div className="p-4 bg-gray-500 border-t">{faq.answer}</div>
+              )}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Large Metallic FAQs Background */}
-      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center pointer-events-none z-0">
-        <h3
-          className="text-[25vw] md:text-[20vw] font-bold uppercase opacity-10"
-          style={{
-            background: "linear-gradient(135deg, #b8b8b8, #4a4a4a)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            textShadow: "2px 2px 10px rgba(255, 255, 255, 0.2)",
-          }}
-        >
+      <div className="h-full w-full absolute top-0 ">
+        <h3 className="items-center content-center text-center font-bold text-[30vw] text-zinc-400">
           FAQs
         </h3>
       </div>

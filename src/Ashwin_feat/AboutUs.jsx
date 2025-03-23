@@ -1,5 +1,6 @@
 import React from "react";
 import aboutimg from "../assets/gallery/image3.jpg";
+import stroke from "../assets/BrushStroke.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -38,12 +39,15 @@ const AboutUs = () => {
     <>
       <section
         id="about"
-        className="text-white py-24 px-6 md:px-12 min-h-screen"
+        className="text-white py-24 px-6 md:px-12 min-h-screen bg-zinc-950"
       >
-        <div className="flex justify-center pb-20 mb-6">
-          <button className="px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
-            About Us
-          </button>
+        <div
+          className="relative m-auto w-fit h-96 flex items-center justify-center scale-125 bg-contain bg-no-repeat bg-center hover:scale-150 cursor-default transition-transform duration-300"
+          style={{ backgroundImage: `url(${stroke})` }} // Use local image
+        >
+          <h1 className="text-black text-4xl font-bold p-10">
+            About
+          </h1>
         </div>
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">

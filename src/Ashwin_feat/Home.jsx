@@ -3,7 +3,7 @@ import aitimg from "../assets/aitcampus-C7eKMdt2.jpg";
 import wave from "../assets/customdiv.svg";
 import AboutUs from "./AboutUs";
 import Gallary from "./Gallary";
-// import Marquee from "../Shubham_features/Marquee";
+import Marquee from "../Shubham_features/Marquee";
 import CountdownTimer from "../Shubham_features/CountdownTimer";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -23,7 +23,7 @@ const Home = () => {
   });
 
   return (
-    <>
+    <div className="bg-zinc-950">
       <div
         className="relative flex flex-col items-center justify-center h-screen w-full text-center bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${aitimg})` }}
@@ -54,10 +54,10 @@ const Home = () => {
           alt="Wave Boundary"
         />
       </div>
-      {/* <Marquee /> */}
+      <Marquee text={"WarTech 3.0 announcement  3rd - 6th April 2025 "} />
       <AboutUs />
       <Gallary />
-    </>
+    </div>
   );
 };
 
