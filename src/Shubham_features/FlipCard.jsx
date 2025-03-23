@@ -18,7 +18,6 @@ const FlipCard = ({ image, title, registerLink, about }) => {
           <button className="flip-card-button">
             <a
               href={registerLink}
-              target="_blank"
               rel="noopener noreferrer"
             >
               Register Now
