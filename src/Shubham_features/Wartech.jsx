@@ -7,7 +7,7 @@ import PageLoader from "./PageLoader";
 import { Link } from "react-router-dom";
 import ClockCountDown from "./ClockCountDown";
 import WartechNav from "./WartechNav";
-import rocketImg from "/event_images/rocket.png";
+import rocketImg from "/event_images/rocket-min.png";
 import ImagePopup from "./PopUp";
 import FlipCard from "./FlipCard";
 import SponsersMar from "./SponsersMar";
@@ -281,7 +281,7 @@ const Wartech = () => {
 
           {/* FAQ Section */}
           <FAQ />
-          {/* <SponsersMar /> */}
+          <SponsersMar />
           {/* Background Video */}
           <section className="fixed top-0 left-0 w-full h-full z-[-1]">
             <video

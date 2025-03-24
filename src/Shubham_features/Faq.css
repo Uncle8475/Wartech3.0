@@ -1,0 +1,8 @@
+.custom-text-bg {
+  background-image: url("../assets//background/jj.png"); /* Change this */
+  background-size: contain;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

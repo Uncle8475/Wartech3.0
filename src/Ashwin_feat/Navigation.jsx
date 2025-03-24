@@ -81,10 +81,14 @@ function Navbar() {
       {/* Contact Button */}
       <button
         ref={ContbutRef}
-        className="md:flex items-center bg-red-800 px-5 py-2 text-md rounded-xl text-white hover:bg-red-800 transition-all shadow-md"
+        className="flex items-center justify-center w-fit px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base font-light bg-red-800 rounded-lg text-white hover:bg-red-700 transition-all shadow-md"
       >
         Contact us
-        <img src={contactIcon} alt="arrow icon" className="ml-2 w-4" />
+        <img
+          src={contactIcon}
+          alt="arrow icon"
+          className="ml-2 w-4 sm:w-5 h-4 "
+        />
       </button>
 
       {/* Mobile Menu Button */}

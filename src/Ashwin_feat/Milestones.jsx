@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import milestoneImage1 from "../assets/bagroundmilestone.png";
 import milestoneImage2 from "../assets/WhatsApp Image 2023-10-28 at 13.57 1.png";
 import "./milestone.css";
+import stroke from "../assets/BrushStroke.png";
+import cardbg from "../assets/bgnew/carbg2.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const milestones = [
@@ -103,19 +105,23 @@ const Milestones = () => {
       {/* Header Section */}
       <div
         id="events"
-        className="w-full h-screen flex flex-col items-center justify-center text-white text-center p-8"
+        className="w-full h-screen flex flex-col items-center justify-center p-8 text-white text-center"
         ref={sectionRef}
       >
-        <button
-          className="px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110 relative overflow-hidden"
+        <div
+          className=" w-fit  flex items-center  justify-center  bg-contain bg-no-repeat bg-center  cursor-default "
           style={{
-            animation: "shine 4s infinite",
+            backgroundImage: `url(${stroke})`,
+            backgroundSize: "100%", // Increase size (try 200% if needed)
+            backgroundPosition: "center",
           }}
         >
-          Milestones
-        </button>
-        <h1 className="pt-10 text-5xl font-bold mt-4">What All We Did</h1>
-        <p className="text-lg mt-2 max-w-2xl">
+          <h1 className="text-black text-4xl font-bold pl-10 pr-10">
+            Milestones
+          </h1>
+        </div>
+        <h1 className="text-5xl font-bold pt-8 ">What All We Did</h1>
+        <p className="text-lg  max-w-2xl">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
           aperiam reiciendis voluptate pariatur labore impedit! Architecto
           necessitatibus eaque laudantium dolorem qui. Dignissimos, nihil!
@@ -131,17 +137,29 @@ const Milestones = () => {
           <div
             key={index}
             ref={(el) => (cardsRef.current[index] = el)}
-            className="bg-white bg-opacity-10 border border-gray-600 rounded-lg shadow-lg p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl text-white text-center max-w-sm mx-auto backdrop-blur-lg"
+            className="relative border  border-gray-600 rounded-lg shadow-lg p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl text-white text-center max-w-sm mx-auto backdrop-blur-lg overflow-hidden"
+            style={{
+              backgroundImage: `url(${cardbg})`, // Background image
+              backgroundSize: "cover", // Cover the entire div
+              backgroundPosition: "center", // Center the image
+              backgroundRepeat: "no-repeat", // No repeating
+            }}
           >
-            <img
-              src={milestone.imgSrc}
-              alt={milestone.title}
-              className="w-full h-40 object-cover rounded-md"
-            />
-            <h2 className="text-lg font-bold mt-4">{milestone.title}</h2>
-            <p className="text-sm mt-2 text-gray-300">
-              {milestone.description}
-            </p>
+            {/* 🔹 Semi-transparent overlay to reduce background opacity */}
+            <div className="absolute inset-0 bg-black bg-opacity-50 "></div>
+
+            {/* 🔹 Card Content (kept on top of overlay) */}
+            <div className="relative z-10">
+              <img
+                src={milestone.imgSrc}
+                alt={milestone.title}
+                className="w-full h-40 object-cover rounded-md"
+              />
+              <h2 className="text-lg font-bold mt-4">{milestone.title}</h2>
+              <p className="text-sm mt-2 text-gray-300">
+                {milestone.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

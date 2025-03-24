@@ -112,7 +112,16 @@ const roboticsEvents = [
     backgroundImage: back1, // Background Image
     description:
       "A large racing track where participants race to complete laps in the fastest time.",
-    contacts: [],
+    contacts: [
+      {
+        id: 4,
+        name: "Ashwin Singh Bisht",
+        event: "linetracer(College) 2025",
+        photo_link: " ",
+        number: "8475067129",
+        whatsapp_link: "https://wa.me/8475067129",
+      },
+    ],
   },
   {
     id: 6,

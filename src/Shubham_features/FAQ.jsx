@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import faqs from "../data/faqData.json";
-
-
+import "./Faq.css";
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -50,7 +49,7 @@ const FAQ = () => {
       </div>
 
       <div className="h-full w-full absolute top-0 ">
-        <h3 className="items-center content-center text-center font-bold text-[30vw] text-zinc-400">
+        <h3 className="items-center opacity-65 content-center text-center font-bold text-[30vw] text-zinc-400  custom-text-bg">
           FAQs
         </h3>
       </div>

@@ -37,50 +37,57 @@ const AboutUs = () => {
 
   return (
     <>
-      <section
-        id="about"
-        className="text-white py-24 px-6 md:px-12 min-h-screen bg-zinc-950"
-      >
-        <div
-          className="relative m-auto w-fit h-96 flex items-center justify-center scale-125 bg-contain bg-no-repeat bg-center hover:scale-150 cursor-default transition-transform duration-300"
-          style={{ backgroundImage: `url(${stroke})` }} // Use local image
-        >
-          <h1 className="text-black text-4xl font-bold p-10">
-            About
-          </h1>
-        </div>
+     <section
+  id="about"
+  className="text-white py-24 px-6 md:px-12 min-h-screen"
+>
+  {/* Centered Milestones heading */}
+  <div className="flex justify-center w-full mb-12"> {/* Added wrapper div with flex justify-center */}
+    <div
+      className="flex items-center justify-center bg-contain bg-no-repeat bg-center cursor-default"
+      style={{
+        backgroundImage: `url(${stroke})`,
+        backgroundSize: "100%", 
+        backgroundPosition: "center",
+      }}
+    >
+      <h1 className="text-black text-4xl font-bold px-10 py-2"> {/* Adjusted padding */}
+        About us
+      </h1>
+    </div>
+  </div>
 
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <div ref={pref} className="md:w-1/2 text-center md:text-left">
-            <p className="text-gray-300 text-lg leading-relaxed">
-              We are a passionate team dedicated to providing top-notch
-              solutions that enhance user experiences and drive innovation. Our
-              mission is to deliver quality products and services that make a
-              difference.
-            </p>
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <div ref={pref} className="md:w-1/2 text-center md:text-left">
+      <p className="text-gray-300 text-lg leading-relaxed">
+        We are a passionate team dedicated to providing top-notch
+        solutions that enhance user experiences and drive innovation. Our
+        mission is to deliver quality products and services that make a
+        difference.
+      </p>
 
-            <div className="mt-6 space-y-3">
-              <p className="flex items-center text-gray-400">
-                ✅ Quality-driven solutions
-              </p>
-              <p className="flex items-center text-gray-400">
-                ✅ Customer-centric approach
-              </p>
-              <p className="flex items-center text-gray-400">
-                ✅ Innovation & Excellence
-              </p>
-            </div>
-          </div>
+      <div className="mt-6 space-y-3">
+        <p className="flex items-center text-gray-400">
+          ✅ Quality-driven solutions
+        </p>
+        <p className="flex items-center text-gray-400">
+          ✅ Customer-centric approach
+        </p>
+        <p className="flex items-center text-gray-400">
+          ✅ Innovation & Excellence
+        </p>
+      </div>
+    </div>
 
-          <div ref={imgref} className="md:w-1/2">
-            <img
-              src={aboutimg}
-              alt="About Us"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
+    <div ref={imgref} className="md:w-1/2">
+      <img
+        src={aboutimg}
+        alt="About Us"
+        className="rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
+</section>
     </>
   );
 };

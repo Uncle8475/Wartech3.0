@@ -28,7 +28,7 @@ const BlogPage = () => {
   }, [activeTopic]);
 
   return (
-    <div className="mt-20 flex flex-col md:flex-row bg-zinc-950 text-white">
+    <div className="mt-20 flex flex-col md:flex-row text-white">
       {/* Left Sidebar - Topics */}
       <aside className="w-full md:w-1/4 bg-zinc-900 p-4 overflow-y-auto h-screen">
         <h2 className="text-lg font-bold mb-4">Topics</h2>

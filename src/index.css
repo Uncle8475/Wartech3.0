@@ -16,8 +16,11 @@ html {
 
 /* Body Styles */
 body {
-  @apply  text-white font-sans;
+  @apply text-white  bg-[#0d0d0d] font-sans;
+  background: url("./assets/bgnew/pagebg.jpg");
+  background-size: contain;
   font-family: "Poppins", sans-serif;
+  backface-visibility: hidden;
   font-weight: 300;
   font-style: normal;
   overflow-x: hidden;
@@ -50,4 +53,19 @@ h2 {
 /* Responsive Grid */
 .grid-cols-auto {
   @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
 }

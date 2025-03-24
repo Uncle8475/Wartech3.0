@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import stroke from "../assets/BrushStroke.png";
 // Import images from assets/gallery
 import img1 from "../assets/gallery/image1.jpg";
 import img2 from "../assets/gallery/image2.jpg";
@@ -36,7 +36,7 @@ function Gallery() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [length ,current]);
+  }, [length, current]);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -47,12 +47,21 @@ function Gallery() {
   };
 
   return (
-    <div className="bg-zinc-950 container  mx-auto px-4 py-20 flex flex-col items-center">
-      <div className="flex justify-center pb-20 mb-1">
-        <button className="px-8 py-4 text-2xl rounded-full border-2 border-[#8b1e1e] text-white bg-gradient-to-r from-[#300000] to-[#600000] transition-all duration-300 ease-in-out hover:scale-110">
-          Gallary
-        </button>
-      </div>
+    <div className=" container  mx-auto px-4 py-20 flex flex-col items-center">
+      <div className="flex justify-center w-full mb-12"> {/* Added wrapper div with flex justify-center */}
+          <div
+            className="flex items-center justify-center bg-contain bg-no-repeat bg-center cursor-default"
+            style={{
+              backgroundImage: `url(${stroke})`,
+              backgroundSize: "100%", 
+              backgroundPosition: "center",
+            }}
+          >
+            <h1 className="text-black text-4xl font-bold px-10 py-2"> {/* Adjusted padding */}
+            Gallery 
+            </h1>
+          </div>
+        </div>
 
       <div
         ref={gallRef}

@@ -23,7 +23,7 @@ const Home = () => {
   });
 
   return (
-    <div className="bg-zinc-950">
+    <div className="">
       <div
         className="relative flex flex-col items-center justify-center h-screen w-full text-center bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${aitimg})` }}
@@ -54,7 +54,7 @@ const Home = () => {
           alt="Wave Boundary"
         />
       </div>
-      <Marquee text={"WarTech 3.0 announcement  3rd - 6th April 2025 "} />
+      {/* <Marquee text={"WarTech 3.0 announcement  3rd - 6th April 2025 "} /> */}
       <AboutUs />
       <Gallary />
     </div>
