@@ -169,7 +169,7 @@ const Wartech = () => {
       ) : (
         <>
           <WartechNav />
-          <div className="h-screen flex items-center justify-center bg-transparent flex-col">
+          <div className="h-screen  flex items-center justify-center bg-transparent flex-col">
             <motion.div
               className="opacity-0"
               animate={{ opacity: [0, 1] }}
@@ -189,7 +189,13 @@ const Wartech = () => {
             >
               Wartech
             </motion.h1>
-            <ClockCountDown />
+
+            <div className="hidden md:block">
+              <ClockCountDown />
+            </div>
+            <div className="block md:hidden">
+              <ClockCountDown mobile={true} />
+            </div>
             <motion.h3
               ref={dateRef}
               className="text-xl md:text-2xl lg:text-4xl mt-10 font-extrabold drop-shadow-2xl text-white"
@@ -214,7 +220,7 @@ const Wartech = () => {
           >
             <img
               ref={rocketRef}
-              className="rocket object-cover h-[110vh]"
+              className="hidden md:block rocket object-cover h-[110vh]"
               src={rocketImg}
               alt=""
             />
@@ -254,7 +260,7 @@ const Wartech = () => {
           {/* Events List - Moves Right on Scroll */}
           <div
             ref={eventsListRef}
-            className="events-container h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-4 md:mx-10"
+            className="hidden md:block events-container h-screen w-fit content-center whitespace-nowrap overflow-x-hidden mx-4 md:mx-10"
           >
             <p className="flex gap-4 md:gap-10 text-4xl md:text-6xl lg:text-9xl font-bold">
               <span>EVENTS</span>
@@ -279,11 +285,31 @@ const Wartech = () => {
             </div>
           </div>
 
+          <div className="md:hidden events-container w-full flex flex-col items-center content-center md:mx-10">
+            {/* Scrolling text effect on smaller screens */}
+              <p className="flex gap-4 md:gap-10 text-5xl md:text-6xl lg:text-9xl font-bold whitespace-nowrap mt-10">
+                  <span >EVENTS</span>
+              </p>
+
+            {/* Events Grid */}
+            <div className="md:hidden  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-10 mt-6">
+              {eventImages.map((event, index) => (
+                <FlipCard
+                  key={index}
+                  title={event.title}
+                  image={`/event_images/${event.image}`}
+                  registerLink={`register/${event.title}`}
+                  about={event.about}
+                />
+              ))}
+            </div>
+          </div>
+
           {/* FAQ Section */}
           <FAQ />
           <SponsersMar />
           {/* Background Video */}
-          <section className="fixed top-0 left-0 w-full h-full z-[-1]">
+          <section className="hidden md:block md:fixed top-0 left-0 w-full h-full z-[-1]">
             <video
               src="/bg-video.mp4"
               autoPlay

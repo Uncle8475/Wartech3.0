@@ -10,15 +10,15 @@ const FAQ = () => {
   };
 
   return (
-    <div className=" relative w-screen  bg-zinc-950 flex flex-col  p-10 pb-20 ">
-      <h2 className="text-6xl font-bold mb-4 text-center">
+    <div className="relative w-screen  bg-zinc-950 flex flex-col  pt-10 pb-20 ">
+      <h2 className=" w-full text-4xl md:text-6xl font-bold mb-4 text-center">
         Frequently Asked Questions
       </h2>
-      <div className="w-full  overflow-visible flex flex-col md:flex-row  justify-around z-10">
+      <div className="w-full flex flex-col md:flex-row  justify-around z-10">
         <motion.img
           src="event_images/SpaceSuit.png"
           alt="space_suit"
-          className="w-1/3 h-1/2 my-auto object-cover rounded-lg"
+          className="md:w-1/3 md:h-1/2 my-auto object-cover rounded-lg"
           animate={{
             y: [0, -15, 0], // Moves up and down
           }}
@@ -32,7 +32,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className=" w-2/3 border rounded-lg overflow-hidden"
+              className= "w-5/6 md:w-2/3 border rounded-lg overflow-hidden"
             >
               <button
                 className="w-full p-4 text-left font-semibold bg-black  hover:bg-gray-200 hover:text-black"
@@ -48,7 +48,7 @@ const FAQ = () => {
         </div>
       </div>
 
-      <div className="h-full w-full absolute top-0 ">
+      <div className="hidden md:block h-full w-full absolute top-0 ">
         <h3 className="items-center opacity-65 content-center text-center font-bold text-[30vw] text-zinc-400  custom-text-bg">
           FAQs
         </h3>

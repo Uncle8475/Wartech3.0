@@ -43,7 +43,7 @@ function Footer() {
                   : "hover:text-gray-400"
               }
             >
-              Events
+              Wartech
             </NavLink>
             <NavLink
               to="/Milestones"
@@ -82,16 +82,24 @@ function Footer() {
         <div className="w-full md:w-1/3">
           <h3 className="text-lg font-semibold mb-3">Connect with us</h3>
           <div className="flex gap-4 mb-4">
-            <a href="#" className="hover:opacity-80">
+            <a
+              href="https://www.instagram.com/robotics.club_ait?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              className="hover:opacity-80"
+            >
               <img src={instagram} alt="Instagram" className="w-8" />
             </a>
-            <a href="#" className="hover:opacity-80">
+            <a
+              href="https://www.linkedin.com/company/centre-of-excellence-for-ai-and-robotics/"
+              target="_blank"
+              className="hover:opacity-80"
+            >
               <img src={LinkedIn} alt="LinkedIn" className="w-8" />
             </a>
-            <a href="#" className="hover:opacity-80">
+            <a href="#" target="_blank" className="hover:opacity-80">
               <img src={Facebook} alt="Facebook" className="w-8" />
             </a>
-            <a href="#" className="hover:opacity-80">
+            <a href="#" target="_blank" className="hover:opacity-80">
               <img src={TwitterX} alt="TwitterX" className="w-8" />
             </a>
           </div>
