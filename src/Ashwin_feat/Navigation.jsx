@@ -49,7 +49,7 @@ function Navbar() {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 text-white text-lg">
-        {["Home", "About Us", "Wartech", "Blogs", "Milestones"].map(
+        {["Home", "About Us", "Wartech", "Blogs", "Milestones","Events"].map(
           (item, index) => (
             <li key={item}>
               {item === "About Us" ? (
