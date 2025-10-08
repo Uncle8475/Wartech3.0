@@ -109,7 +109,7 @@ function Navbar() {
             &times;
           </span>
           <ul className="mt-10 space-y-8 text-xl">
-            {["Home", "About Us", "Wartech", "Blogs", "Milestones"].map(
+            {["Home", "About Us", "Wartech", "Blogs", "Milestones","Events].map(
               (item) => (
                 <li key={item}>
                   {item === "About Us" ? (
